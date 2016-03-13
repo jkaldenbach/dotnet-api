@@ -7,6 +7,7 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using dotnet_api.Models;
 
 namespace dotnet_api
 {
@@ -28,6 +29,9 @@ namespace dotnet_api
         {
             // Add framework services.
             services.AddMvc();
+            
+            // Add repository type
+            services.AddSingleton<ITodoRepository, TodoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

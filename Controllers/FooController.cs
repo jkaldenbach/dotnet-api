@@ -20,7 +20,7 @@ namespace dotnet_api.Controllers
       return foos;
     }
 
-    //Get: api/foo/name
+    //Get: api/foo/{name}
     [HttpGet("{name}")]
     public IEnumerable<Foo> Insert(string name)
     {
